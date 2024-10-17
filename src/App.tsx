@@ -49,7 +49,8 @@ export default function Game() {
             "font-bold",
             "uppercase",
             "text-xl text-center",
-            "bg-foreground w-full py-4 rounded"
+            "bg-foreground w-full py-4 rounded",
+            "hover:opacity-80 transition-opacity duration-200"
           )}
           onClick={resetHandler}
         >
