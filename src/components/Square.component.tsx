@@ -16,9 +16,10 @@ export default function Square({ value, onSquareClick, disabled, highlight }: Sq
       onClick={onSquareClick}
       disabled={isDisabled}
       className={clsx(
-        "bg-background",
-        highlight && "bg-[#064a03]",
-        isDisabled ? "bg-background/[.7]" : "hover:bg-hover transition-colors duration-200",
+        highlight ? "bg-[#064a03]" : "bg-background",
+        isDisabled
+          ? !highlight && "bg-background/[.7]"
+          : "hover:bg-hover transition-colors duration-200",
         "relative"
       )}
     >
